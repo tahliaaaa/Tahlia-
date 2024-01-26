@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Message</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffccff; /* Pink background */
+            text-align: center;
+            padding: 50px;
+        }
+
+        #container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            font-weight: bold;
+        }
+
+        #puppy {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        p {
+            margin-top: 20px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        #question {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            order: 2; /* Added order property */
+        }
+
+        #options {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .option {
+            margin: 0 10px;
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Hey Tahlia! I made this website! I know it's not that catchy, but I tried my best to make it look good. I hope you'll like it 😊</h1>
+        <img id="puppy" src="https://e0.pxfuel.com/wallpapers/944/816/desktop-wallpaper-baby-puppies-cute-baby-puppy-thumbnail.jpg" alt="Cute Puppy">
+        <p>Hi there! I hope this message doesn't come across as too sudden. We crossed paths yesterday, but I've noticed you around SP and on campus before. I've been wanting to strike up a conversation, but nerves got the best of me. You might have seen me— I was quite jittery when we finally talked. I have to be honest; you're the most stunning person I've come across, and those eyes of yours are truly captivating. Being around you makes me a bit nervous, in the best way possible. I apologize if this sounds a bit forward; the last thing I want is to come off as creepy.
+
+            I understand you're likely occupied with your own commitments, and I appreciate your time. Despite that, I can't help but wonder if you'd be interested in going for a walk or dinner with me. You strike me as an intriguing person, and I'd love the chance to get to know you better. Of course, I completely respect your decision, and even the opportunity to chat with you has brought a smile to my face. 😊 </p>
+
+        <div id="question">Will you go out with me for dinner or a walk maybe?</div>
+        <div id="options">
+            <div class="option" onclick="showPopup('Yes')">Yes</div>
+            <div class="option" onclick="changePosition('No')">No</div>
+        </div>
+    </div>
+
+    <script>
+        function showPopup(response) {
+            if (response === 'Yes') {
+                alert("Thanks!!! 😊");
+            }
+        }
+
+        function changePosition(response) {
+            if (response === 'No') {
+                document.getElementById('question').style.order = '1';
+            }
+        }
+    </script>
+</body>
+</html>
